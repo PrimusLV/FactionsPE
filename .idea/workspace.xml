@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php" line="34" mnemonic="4" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e6e121d-d6c1-41c8-8f53-f5da539930b7" name="Default" comment="" />
+    <ignored path="Factions.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Factions" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/Main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="e#27#63#0#PHP" expanded="true" />
+                <element signature="e#2066#3694#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactionCommand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/factions/command/FactionCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+              <folding>
+                <element signature="e#119#149#0#PHP" expanded="true" />
+                <element signature="e#730#869#0#PHP" expanded="false" />
+                <element signature="e#3148#3200#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerEventListener.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+              <folding>
+                <element signature="e#125#156#0#PHP" expanded="true" />
+                <element signature="e#445#544#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Economy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/integrations/Economy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="e#124#148#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerDeathEvent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../src/pocketmine/event/player/PlayerDeathEvent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NBTDataProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/data/NBTDataProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+              <folding>
+                <element signature="e#116#145#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Faction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/faction/Faction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="233" column="63" selection-start-line="233" selection-start-column="63" selection-end-line="233" selection-end-column="63" />
+              <folding>
+                <element signature="e#120#156#0#PHP" expanded="true" />
+                <element signature="e#1694#1764#0#PHP" expanded="false" />
+                <element signature="e#1829#1890#0#PHP" expanded="false" />
+                <element signature="e#1956#2040#0#PHP" expanded="false" />
+                <element signature="e#2045#2121#0#PHP" expanded="false" />
+                <element signature="e#2222#2428#0#PHP" expanded="false" />
+                <element signature="e#2434#2567#0#PHP" expanded="false" />
+                <element signature="e#2572#2968#0#PHP" expanded="false" />
+                <element signature="e#3097#3477#0#PHP" expanded="false" />
+                <element signature="e#3483#3554#0#PHP" expanded="false" />
+                <element signature="e#3556#3726#0#PHP" expanded="false" />
+                <element signature="e#3732#3815#0#PHP" expanded="false" />
+                <element signature="e#3820#4040#0#PHP" expanded="false" />
+                <element signature="e#4046#4131#0#PHP" expanded="false" />
+                <element signature="e#4202#4427#0#PHP" expanded="false" />
+                <element signature="e#4602#4667#0#PHP" expanded="false" />
+                <element signature="e#4817#4879#0#PHP" expanded="false" />
+                <element signature="e#4885#4990#0#PHP" expanded="false" />
+                <element signature="e#4992#5065#0#PHP" expanded="false" />
+                <element signature="e#5252#5330#0#PHP" expanded="false" />
+                <element signature="e#5402#5509#0#PHP" expanded="false" />
+                <element signature="e#5680#5712#0#PHP" expanded="false" />
+                <element signature="e#5804#5845#0#PHP" expanded="false" />
+                <element signature="e#5847#5993#0#PHP" expanded="false" />
+                <element signature="e#6086#7174#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/objs/Rel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding>
+                <element signature="e#346#389#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/faction/Factions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="152" column="59" selection-start-line="152" selection-start-column="59" selection-end-line="152" selection-end-column="59" />
+              <folding>
+                <element signature="e#34#65#0#PHP" expanded="true" />
+                <element signature="e#633#708#0#PHP" expanded="false" />
+                <element signature="e#799#916#0#PHP" expanded="false" />
+                <element signature="e#1004#1104#0#PHP" expanded="false" />
+                <element signature="e#1110#1217#0#PHP" expanded="false" />
+                <element signature="e#1223#1330#0#PHP" expanded="false" />
+                <element signature="e#1333#1446#0#PHP" expanded="false" />
+                <element signature="e#1449#1582#0#PHP" expanded="false" />
+                <element signature="e#1588#1691#0#PHP" expanded="false" />
+                <element signature="e#1697#1806#0#PHP" expanded="false" />
+                <element signature="e#1812#2020#0#PHP" expanded="false" />
+                <element signature="e#2026#2153#0#PHP" expanded="false" />
+                <element signature="e#2158#2260#0#PHP" expanded="false" />
+                <element signature="e#2262#2439#0#PHP" expanded="false" />
+                <element signature="e#2445#2537#0#PHP" expanded="false" />
+                <element signature="e#2542#2751#0#PHP" expanded="false" />
+                <element signature="e#2591#2724#0#PHP" expanded="false" />
+                <element signature="e#2754#2854#0#PHP" expanded="false" />
+                <element signature="e#2856#2921#0#PHP" expanded="false" />
+                <element signature="e#2924#3019#0#PHP" expanded="false" />
+                <element signature="e#3021#3267#0#PHP" expanded="false" />
+                <element signature="e#3270#3377#0#PHP" expanded="false" />
+                <element signature="e#3379#3531#0#PHP" expanded="false" />
+                <element signature="e#3573#3650#0#PHP" expanded="false" />
+                <element signature="e#3656#3862#0#PHP" expanded="false" />
+                <element signature="e#4138#5814#0#PHP" expanded="false" />
+                <element signature="e#5820#5980#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factions/data/DataProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/factions/FactionPlus.php" />
+        <option value="$PROJECT_DIR$/plugin.yml" />
+        <option value="$PROJECT_DIR$/resources/config.yml" />
+        <option value="$PROJECT_DIR$/src/factions/utils/Text.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/FactionDisbandEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/FactionRenameEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/LandChangeEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/base/ListenerBase.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/listener/FactionLeaveEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/FactionLeaveEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/listener/FactionEventListener.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/FactionCreateEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/FactionJoinEvent.php" />
+        <option value="$PROJECT_DIR$/src/factions/base/EventBase.php" />
+        <option value="$PROJECT_DIR$/src/factions/objs/FPlayer.php" />
+        <option value="$PROJECT_DIR$/../../src/pocketmine/nbt/tag/CompoundTag.php" />
+        <option value="$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php" />
+        <option value="$PROJECT_DIR$/src/factions/integrations/Economy.php" />
+        <option value="$PROJECT_DIR$/src/factions/command/Create.php" />
+        <option value="$PROJECT_DIR$/src/factions/data/DataProvider.php" />
+        <option value="$PROJECT_DIR$/src/factions/faction/Factions.php" />
+        <option value="$PROJECT_DIR$/src/factions/data/NBTDataProvider.php" />
+        <option value="$PROJECT_DIR$/src/factions/Main.php" />
+        <option value="$PROJECT_DIR$/src/factions/faction/Faction.php" />
+        <option value="$PROJECT_DIR$/src/factions/objs/Rel.php" />
+        <option value="$PROJECT_DIR$/src/factions/command/FactionCommand.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PocketMine PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../src/pocketmine" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="56" />
+    <option name="y" value="-4" />
+    <option name="width" value="1225" />
+    <option name="height" value="1029" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integrations" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faction" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FactionPlus" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/factions/event" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Main.php">
+    <configuration default="false" name="Main.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Factions/src/factions/Main.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Main.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Main.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e6e121d-d6c1-41c8-8f53-f5da539930b7" name="Default" comment="" />
+      <created>1463595383765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1463595383765</updated>
+      <workItem from="1463595392568" duration="6431000" />
+      <workItem from="1090185320450" duration="25062000" />
+      <workItem from="1463730129172" duration="10160000" />
+      <workItem from="1090184944385" duration="28989000" />
+      <workItem from="1090185558565" duration="5116000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="75758000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="56" y="-4" width="1225" height="1029" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27056828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32339954" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32339954" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2663274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="13" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/factions/base/EventBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionCreateEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionDisbandEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionJoinEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionRenameEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/LandChangeEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#27#63#0#PHP" expanded="true" />
+            <element signature="e#2066#3694#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/command/FactionCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="e#119#149#0#PHP" expanded="true" />
+            <element signature="e#730#869#0#PHP" expanded="false" />
+            <element signature="e#3148#3200#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/utils/Text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="e#1318#1689#0#PHP" expanded="false" />
+            <element signature="e#1967#2633#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Factions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+          <folding>
+            <element signature="e#34#65#0#PHP" expanded="true" />
+            <element signature="e#633#708#0#PHP" expanded="false" />
+            <element signature="e#799#916#0#PHP" expanded="false" />
+            <element signature="e#1004#1104#0#PHP" expanded="false" />
+            <element signature="e#1110#1217#0#PHP" expanded="false" />
+            <element signature="e#1223#1330#0#PHP" expanded="false" />
+            <element signature="e#1333#1446#0#PHP" expanded="false" />
+            <element signature="e#1449#1582#0#PHP" expanded="false" />
+            <element signature="e#1588#1691#0#PHP" expanded="false" />
+            <element signature="e#1697#1806#0#PHP" expanded="false" />
+            <element signature="e#1812#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2153#0#PHP" expanded="false" />
+            <element signature="e#2158#2260#0#PHP" expanded="false" />
+            <element signature="e#2262#2439#0#PHP" expanded="false" />
+            <element signature="e#2445#2537#0#PHP" expanded="false" />
+            <element signature="e#2542#2751#0#PHP" expanded="false" />
+            <element signature="e#2591#2724#0#PHP" expanded="false" />
+            <element signature="e#2754#2854#0#PHP" expanded="false" />
+            <element signature="e#2856#2921#0#PHP" expanded="false" />
+            <element signature="e#2924#3019#0#PHP" expanded="false" />
+            <element signature="e#3021#3267#0#PHP" expanded="false" />
+            <element signature="e#3270#3377#0#PHP" expanded="false" />
+            <element signature="e#3379#3531#0#PHP" expanded="false" />
+            <element signature="e#3573#3650#0#PHP" expanded="false" />
+            <element signature="e#3656#3862#0#PHP" expanded="false" />
+            <element signature="e#4138#5814#0#PHP" expanded="false" />
+            <element signature="e#5820#5980#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Faction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="157" column="42" selection-start-line="157" selection-start-column="42" selection-end-line="157" selection-end-column="42" />
+          <folding>
+            <element signature="e#120#156#0#PHP" expanded="true" />
+            <element signature="e#1694#1764#0#PHP" expanded="false" />
+            <element signature="e#1829#1890#0#PHP" expanded="false" />
+            <element signature="e#1956#2040#0#PHP" expanded="false" />
+            <element signature="e#2045#2121#0#PHP" expanded="false" />
+            <element signature="e#2222#2428#0#PHP" expanded="false" />
+            <element signature="e#2434#2567#0#PHP" expanded="false" />
+            <element signature="e#2572#2968#0#PHP" expanded="false" />
+            <element signature="e#3097#3477#0#PHP" expanded="false" />
+            <element signature="e#3483#3554#0#PHP" expanded="false" />
+            <element signature="e#3556#3726#0#PHP" expanded="false" />
+            <element signature="e#3732#3815#0#PHP" expanded="false" />
+            <element signature="e#3820#4040#0#PHP" expanded="false" />
+            <element signature="e#4046#4131#0#PHP" expanded="false" />
+            <element signature="e#4202#4427#0#PHP" expanded="false" />
+            <element signature="e#4602#4667#0#PHP" expanded="false" />
+            <element signature="e#4817#4879#0#PHP" expanded="false" />
+            <element signature="e#4885#4990#0#PHP" expanded="false" />
+            <element signature="e#4992#5065#0#PHP" expanded="false" />
+            <element signature="e#5252#5330#0#PHP" expanded="false" />
+            <element signature="e#5402#5509#0#PHP" expanded="false" />
+            <element signature="e#5680#5712#0#PHP" expanded="false" />
+            <element signature="e#5804#5845#0#PHP" expanded="false" />
+            <element signature="e#5847#5993#0#PHP" expanded="false" />
+            <element signature="e#6086#7174#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/Rel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#346#389#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/FPlayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+          <folding>
+            <element signature="e#117#147#0#PHP" expanded="false" />
+            <element signature="e#399#461#0#PHP" expanded="false" />
+            <element signature="e#506#691#0#PHP" expanded="false" />
+            <element signature="e#698#792#0#PHP" expanded="false" />
+            <element signature="e#797#1095#0#PHP" expanded="false" />
+            <element signature="e#1102#1207#0#PHP" expanded="false" />
+            <element signature="e#1212#1276#0#PHP" expanded="false" />
+            <element signature="e#1282#1362#0#PHP" expanded="false" />
+            <element signature="e#1490#1573#0#PHP" expanded="false" />
+            <element signature="e#1578#1823#0#PHP" expanded="false" />
+            <element signature="e#1829#1916#0#PHP" expanded="false" />
+            <element signature="e#2098#2186#0#PHP" expanded="false" />
+            <element signature="e#2499#2677#0#PHP" expanded="false" />
+            <element signature="e#2683#2767#0#PHP" expanded="false" />
+            <element signature="e#2773#2828#0#PHP" expanded="false" />
+            <element signature="e#2833#2970#0#PHP" expanded="false" />
+            <element signature="e#3019#3104#0#PHP" expanded="false" />
+            <element signature="e#3109#3234#0#PHP" expanded="false" />
+            <element signature="e#3240#3317#0#PHP" expanded="false" />
+            <element signature="e#3322#3506#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="e#27#63#0#PHP" expanded="true" />
+            <element signature="e#2066#3694#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Factions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="e#34#65#0#PHP" expanded="true" />
+            <element signature="e#633#708#0#PHP" expanded="false" />
+            <element signature="e#799#916#0#PHP" expanded="false" />
+            <element signature="e#1004#1104#0#PHP" expanded="false" />
+            <element signature="e#1110#1217#0#PHP" expanded="false" />
+            <element signature="e#1223#1330#0#PHP" expanded="false" />
+            <element signature="e#1333#1446#0#PHP" expanded="false" />
+            <element signature="e#1449#1582#0#PHP" expanded="false" />
+            <element signature="e#1588#1691#0#PHP" expanded="false" />
+            <element signature="e#1697#1806#0#PHP" expanded="false" />
+            <element signature="e#1812#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2153#0#PHP" expanded="false" />
+            <element signature="e#2158#2260#0#PHP" expanded="false" />
+            <element signature="e#2262#2439#0#PHP" expanded="false" />
+            <element signature="e#2445#2537#0#PHP" expanded="false" />
+            <element signature="e#2542#2751#0#PHP" expanded="false" />
+            <element signature="e#2591#2724#0#PHP" expanded="false" />
+            <element signature="e#2754#2854#0#PHP" expanded="false" />
+            <element signature="e#2856#2921#0#PHP" expanded="false" />
+            <element signature="e#2924#3019#0#PHP" expanded="false" />
+            <element signature="e#3021#3267#0#PHP" expanded="false" />
+            <element signature="e#3270#3377#0#PHP" expanded="false" />
+            <element signature="e#3379#3531#0#PHP" expanded="false" />
+            <element signature="e#3573#3650#0#PHP" expanded="false" />
+            <element signature="e#3656#3862#0#PHP" expanded="false" />
+            <element signature="e#4138#5814#0#PHP" expanded="false" />
+            <element signature="e#5820#5980#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Faction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#120#156#0#PHP" expanded="true" />
+            <element signature="e#1694#1764#0#PHP" expanded="false" />
+            <element signature="e#1829#1890#0#PHP" expanded="false" />
+            <element signature="e#1956#2040#0#PHP" expanded="false" />
+            <element signature="e#2045#2121#0#PHP" expanded="false" />
+            <element signature="e#2222#2428#0#PHP" expanded="false" />
+            <element signature="e#2434#2567#0#PHP" expanded="false" />
+            <element signature="e#2572#2968#0#PHP" expanded="false" />
+            <element signature="e#3097#3477#0#PHP" expanded="false" />
+            <element signature="e#3483#3554#0#PHP" expanded="false" />
+            <element signature="e#3556#3726#0#PHP" expanded="false" />
+            <element signature="e#3732#3815#0#PHP" expanded="false" />
+            <element signature="e#3820#4040#0#PHP" expanded="false" />
+            <element signature="e#4046#4131#0#PHP" expanded="false" />
+            <element signature="e#4202#4427#0#PHP" expanded="false" />
+            <element signature="e#4602#4667#0#PHP" expanded="false" />
+            <element signature="e#4817#4879#0#PHP" expanded="false" />
+            <element signature="e#4885#4990#0#PHP" expanded="false" />
+            <element signature="e#4992#5065#0#PHP" expanded="false" />
+            <element signature="e#5252#5330#0#PHP" expanded="false" />
+            <element signature="e#5402#5509#0#PHP" expanded="false" />
+            <element signature="e#5680#5712#0#PHP" expanded="false" />
+            <element signature="e#5804#5845#0#PHP" expanded="false" />
+            <element signature="e#5847#5993#0#PHP" expanded="false" />
+            <element signature="e#6086#7174#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/Rel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#346#389#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/FPlayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#117#147#0#PHP" expanded="false" />
+            <element signature="e#399#461#0#PHP" expanded="false" />
+            <element signature="e#506#691#0#PHP" expanded="false" />
+            <element signature="e#698#792#0#PHP" expanded="false" />
+            <element signature="e#797#1095#0#PHP" expanded="false" />
+            <element signature="e#1102#1207#0#PHP" expanded="false" />
+            <element signature="e#1212#1276#0#PHP" expanded="false" />
+            <element signature="e#1282#1362#0#PHP" expanded="false" />
+            <element signature="e#1490#1573#0#PHP" expanded="false" />
+            <element signature="e#1578#1823#0#PHP" expanded="false" />
+            <element signature="e#1829#1916#0#PHP" expanded="false" />
+            <element signature="e#2098#2186#0#PHP" expanded="false" />
+            <element signature="e#2499#2677#0#PHP" expanded="false" />
+            <element signature="e#2683#2767#0#PHP" expanded="false" />
+            <element signature="e#2773#2828#0#PHP" expanded="false" />
+            <element signature="e#2833#2970#0#PHP" expanded="false" />
+            <element signature="e#3019#3104#0#PHP" expanded="false" />
+            <element signature="e#3109#3234#0#PHP" expanded="false" />
+            <element signature="e#3240#3317#0#PHP" expanded="false" />
+            <element signature="e#3322#3506#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/plugin/PluginBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="237" column="20" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/utils/Text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="e#1318#1689#0#PHP" expanded="false" />
+            <element signature="e#1967#2633#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/event/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionDisbandEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionRenameEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/LandChangeEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/base/ListenerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/entity/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="510" column="12" selection-start-line="510" selection-start-column="12" selection-end-line="510" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="793" column="9" selection-start-line="793" selection-start-column="9" selection-end-line="793" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionLeaveEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#117#145#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/listener/FactionEventListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/base/EventBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionJoinEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/FPlayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
+          <folding>
+            <element signature="e#117#147#0#PHP" expanded="false" />
+            <element signature="e#399#461#0#PHP" expanded="false" />
+            <element signature="e#506#691#0#PHP" expanded="false" />
+            <element signature="e#698#792#0#PHP" expanded="false" />
+            <element signature="e#797#1095#0#PHP" expanded="false" />
+            <element signature="e#1102#1207#0#PHP" expanded="false" />
+            <element signature="e#1212#1276#0#PHP" expanded="false" />
+            <element signature="e#1282#1362#0#PHP" expanded="false" />
+            <element signature="e#1490#1573#0#PHP" expanded="false" />
+            <element signature="e#1578#1823#0#PHP" expanded="false" />
+            <element signature="e#1829#1916#0#PHP" expanded="false" />
+            <element signature="e#2098#2186#0#PHP" expanded="false" />
+            <element signature="e#2499#2677#0#PHP" expanded="false" />
+            <element signature="e#2683#2767#0#PHP" expanded="false" />
+            <element signature="e#2773#2828#0#PHP" expanded="false" />
+            <element signature="e#2833#2970#0#PHP" expanded="false" />
+            <element signature="e#3019#3104#0#PHP" expanded="false" />
+            <element signature="e#3109#3234#0#PHP" expanded="false" />
+            <element signature="e#3240#3317#0#PHP" expanded="false" />
+            <element signature="e#3322#3506#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/FactionCreateEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/nbt/tag/CompoundTag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/Player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43890">
+          <caret line="3055" column="59" selection-start-line="3055" selection-start-column="59" selection-end-line="3055" selection-end-column="59" />
+          <folding>
+            <element signature="e#731#756#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/integrations/Economy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#124#148#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/command/Create.php" />
+    <entry file="file://$PROJECT_DIR$/src/factions/data/DataProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/pocketmine/event/player/PlayerDeathEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/data/NBTDataProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+          <folding>
+            <element signature="e#116#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#63#0#PHP" expanded="true" />
+            <element signature="e#2066#3694#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#125#156#0#PHP" expanded="true" />
+            <element signature="e#445#544#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Factions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="152" column="59" selection-start-line="152" selection-start-column="59" selection-end-line="152" selection-end-column="59" />
+          <folding>
+            <element signature="e#34#65#0#PHP" expanded="true" />
+            <element signature="e#633#708#0#PHP" expanded="false" />
+            <element signature="e#799#916#0#PHP" expanded="false" />
+            <element signature="e#1004#1104#0#PHP" expanded="false" />
+            <element signature="e#1110#1217#0#PHP" expanded="false" />
+            <element signature="e#1223#1330#0#PHP" expanded="false" />
+            <element signature="e#1333#1446#0#PHP" expanded="false" />
+            <element signature="e#1449#1582#0#PHP" expanded="false" />
+            <element signature="e#1588#1691#0#PHP" expanded="false" />
+            <element signature="e#1697#1806#0#PHP" expanded="false" />
+            <element signature="e#1812#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2153#0#PHP" expanded="false" />
+            <element signature="e#2158#2260#0#PHP" expanded="false" />
+            <element signature="e#2262#2439#0#PHP" expanded="false" />
+            <element signature="e#2445#2537#0#PHP" expanded="false" />
+            <element signature="e#2542#2751#0#PHP" expanded="false" />
+            <element signature="e#2591#2724#0#PHP" expanded="false" />
+            <element signature="e#2754#2854#0#PHP" expanded="false" />
+            <element signature="e#2856#2921#0#PHP" expanded="false" />
+            <element signature="e#2924#3019#0#PHP" expanded="false" />
+            <element signature="e#3021#3267#0#PHP" expanded="false" />
+            <element signature="e#3270#3377#0#PHP" expanded="false" />
+            <element signature="e#3379#3531#0#PHP" expanded="false" />
+            <element signature="e#3573#3650#0#PHP" expanded="false" />
+            <element signature="e#3656#3862#0#PHP" expanded="false" />
+            <element signature="e#4138#5814#0#PHP" expanded="false" />
+            <element signature="e#5820#5980#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/objs/Rel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#346#389#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/faction/Faction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="233" column="63" selection-start-line="233" selection-start-column="63" selection-end-line="233" selection-end-column="63" />
+          <folding>
+            <element signature="e#120#156#0#PHP" expanded="true" />
+            <element signature="e#1694#1764#0#PHP" expanded="false" />
+            <element signature="e#1829#1890#0#PHP" expanded="false" />
+            <element signature="e#1956#2040#0#PHP" expanded="false" />
+            <element signature="e#2045#2121#0#PHP" expanded="false" />
+            <element signature="e#2222#2428#0#PHP" expanded="false" />
+            <element signature="e#2434#2567#0#PHP" expanded="false" />
+            <element signature="e#2572#2968#0#PHP" expanded="false" />
+            <element signature="e#3097#3477#0#PHP" expanded="false" />
+            <element signature="e#3483#3554#0#PHP" expanded="false" />
+            <element signature="e#3556#3726#0#PHP" expanded="false" />
+            <element signature="e#3732#3815#0#PHP" expanded="false" />
+            <element signature="e#3820#4040#0#PHP" expanded="false" />
+            <element signature="e#4046#4131#0#PHP" expanded="false" />
+            <element signature="e#4202#4427#0#PHP" expanded="false" />
+            <element signature="e#4602#4667#0#PHP" expanded="false" />
+            <element signature="e#4817#4879#0#PHP" expanded="false" />
+            <element signature="e#4885#4990#0#PHP" expanded="false" />
+            <element signature="e#4992#5065#0#PHP" expanded="false" />
+            <element signature="e#5252#5330#0#PHP" expanded="false" />
+            <element signature="e#5402#5509#0#PHP" expanded="false" />
+            <element signature="e#5680#5712#0#PHP" expanded="false" />
+            <element signature="e#5804#5845#0#PHP" expanded="false" />
+            <element signature="e#5847#5993#0#PHP" expanded="false" />
+            <element signature="e#6086#7174#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factions/command/FactionCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <folding>
+            <element signature="e#119#149#0#PHP" expanded="true" />
+            <element signature="e#730#869#0#PHP" expanded="false" />
+            <element signature="e#3148#3200#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
