@@ -13,8 +13,14 @@ use pocketmine\utils\UUID;
 
 class FPlayer
 {
-    protected $invitation = [];
 
+    const CHAT_GLOBAL = 1;
+    const CHAT_LEVEL = 2;
+    const CHAT_FACTION = 3;
+    const CHAT_NOT_FACTION = 4;
+    const CHAT_NORMAL = 5;
+
+    protected $invitation = [];
     /** @var bool */
     protected $isConsole = false;
     /**
@@ -22,6 +28,7 @@ class FPlayer
      * @var array
      */
     private static $fplayerMap = null;
+    protected $chatChannel = self::CHAT_GLOBAL;
 
     public function __construct(Player $player, $isConsole = false){
         $this->isConsole = $isConsole;
@@ -42,6 +49,7 @@ class FPlayer
         if( !isset(self::$fplayerMap[$player->getUniqueId()->toString()]) ) self::$fplayerMap[$player->getUniqueId()->toString()] = new FPlayer($player);
         return self::$fplayerMap[$player->getUniqueId()->toString()];
     }
+    public static function getAll() : array { return self::$fplayerMap; }
 
     public static function updatePlayerTag($players=[]){
         if($players instanceof FPlayer or $players instanceof Player)
@@ -50,7 +58,8 @@ class FPlayer
             $players = self::$fplayerMap;
         
         foreach($players as $player){
-            $tag = Text::getNameTagFormat();
+            $player = $player instanceof FPlayer ? $player : self::get($player);
+            $tag = Text::getFormat('nametag');
             if($player->hasFaction()) {
                 $tag = str_replace(["{RANK}", "{FACTION}", "{PLAYER}"], [
                     Text::formatRank($player->getRank()),
@@ -108,6 +117,11 @@ class FPlayer
      */
     public function isOfficer() : bool {
         if( $this->hasFaction() ) return in_array($this, $this->getFaction()->getOfficers(), true);
+        return false;
+    }
+
+    public function isMember() : bool {
+        if($this->getRank() === Rel::MEMBER) return true;
         return false;
     }
 
@@ -207,6 +221,16 @@ class FPlayer
     public function getInvitation() : array { return $this->invitation; }
     public function denyInvitation(){ $this->invitation=[]; return true; }
 
+    ////////////////////////////// CHAT CHANNELS ///////////////////////////////////////
+    public function getChatChannel() : int { return $this->chatChannel; }
+    public function setChatChannel($channel){ $this->chatChannel = $channel; }
+    public function sendMessageToChannel($message){
+        foreach(self::$fplayerMap as $player){
+            if($player->getChatChannel() === $this->getChatChannel()){
+                $player->sendMessage($message);
+            }
+        }
+    }
 
 
 }
