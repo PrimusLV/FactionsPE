@@ -33,7 +33,7 @@ class Economy
     public function __construct(Main $main, $preferred="EconomyAPI")
     {
         if(self::$instance === null) self::$instance = $this;
-            else return;
+            else throw new \InvalidStateException(__CLASS__." already constructed.");
 
         $this->server = $main->getServer();
         $this->prices = $main->getConfig()->get('prices', []);
@@ -64,19 +64,14 @@ class Economy
         }
     }
 
+    /** Get instance of constructed Economy class */
     public static function get() : Economy { return self::$instance; }
 
     public function getMoney(Player $player) : int
     {
-        if($this->getName() === 'EconomyAPI'){
-            return $this->economy->myMoney($player);
-        }
-        if($this->getName() === 'PocketMoney'){
-            return $this->economy->getMoney($player->getName());
-        }
-        if($this->getName() === 'GoldStd'){
-            return $this->economy->getMoney($player); // Check
-        }
+        if($this->getName() === 'EconomyAPI') return $this->economy->myMoney($player);
+        if($this->getName() === 'PocketMoney') return $this->economy->getMoney($player->getName());
+        if($this->getName() === 'GoldStd') return $this->economy->getMoney($player); // Check
         if($this->getName() === 'MassiveEconomy'){
             if ($this->economy->isPlayerRegistered($player->getName())) {
                 return $this->economy->getMoney($player->getName());
@@ -85,63 +80,44 @@ class Economy
         return 0;
     }
 
+    /**
+     * Returns beautifully formatted money
+     *
+     * @param $amount
+     * @return string
+     */
     public function formatMoney($amount) : string
     {
-        if($this->getName() === 'EconomyAPI'){
-            return $this->getMonetaryUnit() . $amount;
-        }
-        if($this->getName() === 'PocketMoney'){
-            return $amount . ' ' . $this->getMonetaryUnit();
-        }
-        if($this->getName() === 'GoldStd'){
-            return $amount . $this->getMonetaryUnit();
-        }
-        if($this->getName() === 'MassiveEconomy'){
-            return $this->getMonetaryUnit() . $amount;
-        }
+        if($this->getName() === 'EconomyAPI') return $this->getMonetaryUnit() . $amount;
+        if($this->getName() === 'PocketMoney') return $amount . ' ' . $this->getMonetaryUnit();
+        if($this->getName() === 'GoldStd') return $amount . $this->getMonetaryUnit();
+        if($this->getName() === 'MassiveEconomy') return $this->getMonetaryUnit() . $amount;
         return $amount;
     }
 
     public function getMonetaryUnit() : string
     {
-        if($this->getName() === 'EconomyAPI'){
-            return $this->economy->getMonetaryUnit();
-        }
-        if($this->getName() === 'PocketMoney'){
-            return 'PM';
-        }
-        if($this->getName() === 'GoldStd'){
-            return 'G';
-        }
-        if($this->getName() === 'MassiveEconomy'){
-            return $this->economy->getMoneySymbol() != null ? $this->economy->getMoneySymbol() : '$';
-        }
+        if($this->getName() === 'EconomyAPI') return $this->economy->getMonetaryUnit();
+        if($this->getName() === 'PocketMoney') return 'PM';
+        if($this->getName() === 'GoldStd') return 'G';
+        if($this->getName() === 'MassiveEconomy') return $this->economy->getMoneySymbol() != null ? $this->economy->getMoneySymbol() : '$';
         return "";
-    }
-
-    public function takeMoney(Player $player, $amount, $force=false){
-        switch( strtolower($this->getName()) ){
-            case 'economyapi':
-                return $this->economy->reduceMoney($player, $amount, $force);
-                break;
-            case 'massiveeconomy':
-                return $this->economy->reduceMoney($player, $amount, $force);
-                break;
-            case 'goldstd':
-                return $this->economy->reduceMoney($player, $amount, $force);
-                break;
-            case 'pocketmoney':
-                return $this->economy->takeMoney($player, $amount, $force);
-                break;
-        }
-        return false;
     }
 
     public function getName() : string {
         if($this->economy instanceof DummyEconomy) return $this->economy->getName();
-        return $this->economy->getDescription()->getName();
+        if($this->economy instanceof Plugin) return $this->economy->getDescription()->getName();
+        return "NONE";
     }
+
     public function isLoaded() : bool { if($this->economy instanceof Plugin and $this->economy->isEnabled() ) return true; else return false; }
+    public function takeMoney(Player $player, $amount, $force=false){
+        if($this->getName() === "EconomyAPI") return $this->economy->reduceMoney($player, $amount, $force);
+        if($this->getName() === "PocketMoney") return $this->economy->reduceMoney($player, $amount, $force);
+        if($this->getName() === "GoldStd") return $this->economy->reduceMoney($player, $amount, $force);
+        if($this->getName() === "MassiveEconomy") return $this->economy->takeMoney($player, $amount, $force);
+        return false;
+    }
     public function getAPI() { return $this->economy; }
 
     public function getPrice($node) : int {
