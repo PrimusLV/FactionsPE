@@ -1,3 +1,18 @@
 ---
 language: 'eng'
+
+formats:
+ nametag: "[{RANK}{FACTION}] {PLAYER}"
+ chat:
+  normal: "[{RANK}{FACTION}] {PLAYER}: {MESSAGE}"
+  faction: "&7F>>&f [{RANK}{FACTION}] {PLAYER}: {MESSAGE}"
+ rank:
+  leader: "***"
+  officer: "**"
+  member: "*"
+
+prices:
+ faction:
+  create: 500
+  claim: 300
 ...

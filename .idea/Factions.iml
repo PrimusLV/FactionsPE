@@ -10,9 +10,13 @@
       <library name="PHP">
         <CLASSES>
           <root url="file://$MODULE_DIR$/../../src/pocketmine" />
+          <root url="file://$MODULE_DIR$/../../src/raklib" />
+          <root url="file://$MODULE_DIR$/../../src/spl" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/../../src/pocketmine" />
+          <root url="file://$MODULE_DIR$/../../src/raklib" />
+          <root url="file://$MODULE_DIR$/../../src/spl" />
         </SOURCES>
       </library>
     </orderEntry>

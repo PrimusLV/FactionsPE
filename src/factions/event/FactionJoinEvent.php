@@ -31,4 +31,5 @@ class FactionJoinEvent extends EventBase implements Cancellable
     public function getFaction() : Faction { return $this->faction; }
     public function getPlayer() : FPlayer { return $this->player; }
     // Get previous faction? FactionJoinEvent::getPlayer()->getFaction()
+
 }

@@ -159,6 +159,7 @@ class Factions
 
     public function create($name, FPlayer $creator, $members=[], $power = 0, $description = "", $home = null){
         if(Factions::_getFactionByName($name) instanceof Faction) return false;
+        if(Factions::_getFactionForMember($creator) instanceof Faction) return false;
 
         $mems = [];
         foreach($members as $member => $rank){

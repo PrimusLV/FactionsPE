@@ -1,5 +1,6 @@
 name: FactionPlus
-author: "Kristaps Drivnieks"
+author: "Kristaps Drivnieks aka. Primus"
 api: [ 2.0.0 ]
 main: factions\Main
 version: 1.0.0
+softdepend: [EconomyAPI, MassiveEconomy, GoldStd, PocketMoney, SimpleAuth, KillRate]

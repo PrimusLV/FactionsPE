@@ -9,10 +9,9 @@ use factions\event\listener\PlayerEventListener;
 use factions\faction\Faction;
 use factions\faction\Factions;
 use factions\integrations\Economy;
+use factions\objs\Permission;
 use factions\utils\Text;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\TextFormat;
-use pocketmine\utils\Utils;
 
 class Main extends PluginBase {
 
@@ -24,6 +23,7 @@ class Main extends PluginBase {
     protected $data;
     /** @var Economy $economy */
     protected $economy;
+    /** @var Permission $perm */
 
     public function onLoad()
     {
@@ -31,28 +31,28 @@ class Main extends PluginBase {
         @mkdir($this->getDataFolder()."logs");
         @mkdir($this->getDataFolder()."languages");
         $this->saveDefaultConfig();
-        $this->text = new Text($this, $this->getConfig()->get('language', 'eng'));
     }
 
     public function onEnable(){
-        $this->economy = new Economy($this->getServer());
 
-        $this->factions = new Factions();
-        # Load data provider
-        $this->data = new DataProvider($this, 'NBT');
-        # Load saved factions
-        DataProvider::get()->loadSavedFactions();
+            $this->text = new Text($this, $this->getConfig()->get('language', Text::FALLBACK_LANGUAGE));
+            $this->economy = new Economy($this);
+            $this->factions = new Factions();
+            $this->data = new DataProvider($this, 'NBT');
+            $this->perm = new Permission($this);
 
-        # Register command
-        $this->getServer()->getCommandMap()->register('factions', new FactionCommand($this));
-        # Run managers... ?
+            # Load saved factions
+            DataProvider::get()->loadSavedFactions();
+            # Register command
+            $this->getServer()->getCommandMap()->register('factions', new FactionCommand($this));
+            # Run managers... ?
 
-        # Register Listeners
-        foreach([PlayerEventListener::class, FactionEventListener::class] as $listener){
-            $this->getServer()->getPluginManager()->registerEvents(new $listener($this), $this);
-        }
-        $this->getLogger()->info(Text::get('plugin.log.enable'));
+            # Register Listeners
+            foreach ([PlayerEventListener::class, FactionEventListener::class] as $listener) {
+                $this->getServer()->getPluginManager()->registerEvents(new $listener($this), $this);
+            }
 
+            $this->getLogger()->info(Text::get('plugin.log.enable'));
     }
 
     public function onDisable()
@@ -64,41 +64,4 @@ class Main extends PluginBase {
         $this->getLogger()->info(Text::get('plugin.log.disable'));
     }
 
-
-    public function logError(\Throwable $e){
-
-            $f = date("G-i-s").".errorlog";
-            $file = fopen($this->getDataFolder()."logs/".$f, "w");
-            $server = $this->getServer();
-
-
-            $this->getLogger()->info(Text::get('plugin.log.error', $this->getDataFolder()."logs/$f"));
-
-            $output = "";
-            $output .= "----------------------------------------\n";
-            $output .= "Error Log started on ".date("Y.m.d G:i:s")."\n";
-            $output .= "----------------------------------------\n";
-            $output .= "Server: ".$server->getName()." ".$server->getVersion()." ".$server->getCodename()." ({$server->getApiVersion()})\n";
-            $output .= "Plugin: ".$this->getFullName()." for API ";
-                foreach($this->getDescription()->getCompatibleApis() as $api){
-                    $output .= "$api ";
-                }
-            rtrim($output);
-            $output .= "\nMachine: ".Utils::getOS()."\n";
-
-
-			$output .= "----------------------------------------\n";
-			$output .= "Error:".$e->getMessage()."\n";
-            $output .= "Traceback: ".$e->getTraceAsString()."\n";
-            $output .= "----------------------------------------\n";
-
-            $output .= "------------- Error  Dump --------------\n\n\n";
-            $output .= "\n\n\n".base64_decode($output);
-            fwrite($file, $output);
-
-            foreach($server->getOnlinePlayers() as $p){
-                if($p->isOp()) $p->sendMessage(TextFormat::RED."An internal error occurred in ".$this->getName()." plugin. Check your console.");
-            }
-            fclose($file);
-    }
 }

@@ -17,6 +17,7 @@ use pocketmine\level\Level;
 use pocketmine\level\Position;
 use pocketmine\nbt\tag\ByteTag;
 use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\nbt\tag\IntTag;
 use pocketmine\nbt\tag\ListTag;
 use pocketmine\nbt\tag\StringTag;
 use pocketmine\Player;
@@ -24,6 +25,7 @@ use pocketmine\Server;
 
 class Faction
 {
+    const MAX_PLAYERS = 10; # TODO: Configurable
 
     /** @var  string $id */
     private $id;
@@ -49,8 +51,8 @@ class Faction
         $this->name = $nbt->Name;
         $this->description = $nbt->Description;
         $this->power = $nbt->Power;
+        $this->created = isset($nbt->Created) ? $nbt->Created : time();
 
-        var_dump($nbt);
         if(isset($nbt->HomeLevel) and isset($nbt->HomeX) and isset($nbt->homeY) and isset($nbt->homeZ)){
             $level = $server->getLevelByName($nbt->HomeLevel);
             if($level instanceof Level){
@@ -93,9 +95,9 @@ class Faction
      * Returns a list of online players in the faction
      * @return Player[]
      */
-    public function getOnlinePlayers() : array {
+    public function getOnlineMembers() : array {
         $o = [];
-        foreach($this->members as $member){
+        foreach($this->members as $member => $rank){
             if($p = $this->server->getPlayer($member)) $o[] = $p;
         }
         return $o;
@@ -105,11 +107,15 @@ class Faction
      * Add member to this faction
      * @param FPlayer $player
      * @param $rank
-     * @throws \InvalidStateExcpetion
+     * @throws \InvalidStateException
      */
     public function addMember(FPlayer $player, $rank){
         if(Factions::_getFactionFor($player->getPlayer())){
-            throw new \InvalidStateExcpetion("Player is in faction");
+            throw new \InvalidStateException("Player is in faction");
+        }
+        if($rank === Rel::LEADER){ // This is handled elsewhere
+            $this->newLeader($player);
+            return;
         }
         $this->server->getPluginManager()->callEvent($e = new FactionJoinEvent($player, $this));
 
@@ -140,6 +146,14 @@ class Faction
             if($rank === Rel::LEADER) return $m;
         }
         return "";
+    }
+
+    public function newLeader(FPlayer $member) {
+        if($member->getFaction() !== $this){
+            throw new \InvalidStateException("Player is not in this faction");
+        }
+        $this->members[$this->getLeader()] = Rel::OFFICER;
+        $this->members[strtolower($member->getName())] = Rel::LEADER;
     }
 
     /**
@@ -276,7 +290,8 @@ class Faction
             "Members" => new ListTag("Members", $mems),
             "Power" => new ByteTag("Power", $this->power),
             "Description" => new StringTag("Description", $this->description),
-            "Name" => new StringTag("Name", $this->name)
+            "Name" => new StringTag("Name", $this->name),
+            "Created" => new IntTag("Created", $this->created)
         ]);
         if($this->home instanceof Position and $this->home->getLevel() instanceof Level){
             $nbt["HomeLevel"] = $this->home->getLevel()->getName();
@@ -286,6 +301,8 @@ class Faction
         }
         return clone $nbt;
     }
+
+    public function isFull() : bool { return count($this->members) >= self::MAX_PLAYERS; }
 
 
 }
