@@ -31,4 +31,14 @@ class DataProvider
 
     public static function get(){ return self::$instance; }
 
+    public static function readFile($file) : string { return file_get_contents($file); }
+
+    public static function writeFile($file, $data){
+        $f = fopen($file, "w");
+        if($f){
+            fwrite($f, $data);
+        }
+        fclose($f);
+    }
+
 }
