@@ -71,11 +71,14 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
                 $name = $args[1];
                 $price = 500; // TODO: Economy::getPrice('faction.create');
                 if(Economy::get()->getMoney($sender) < $price){
-                    $sender->sendMessage("You don't have enough money"); // economy.not.enough
+                    $sender->sendMessage(Text::get('economy.not.enough')); // economy.not.enough
                     return true;
                 }
-                Economy::get()->takeMoney($sender, $price);
-                Factions::_create($name, $fp);
+                if(Factions::_create($name, $fp)){
+                    Economy::get()->takeMoney($sender, $price);
+                    $sender->sendMessage(Text::get('command.create.success'));
+                    return true;
+                }
                 return true;
             break;
 
