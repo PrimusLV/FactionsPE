@@ -9,28 +9,40 @@
 namespace factions\integrations;
 
 
+use factions\Main;
 use factions\utils\Text;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
-use pocketmine\Server;
-use pocketmine\utils\TextFormat;
 
 class Economy
 {
 
     private static $instance = null;
 
-    public function __construct(Server $server, $preferred="EconomyAPI")
+    /** @var array $prices */
+    protected $prices = [];
+
+    /** @var mixed $economy */
+    protected $economy;
+
+    /**
+     * Economy constructor.
+     * @param Main $main
+     * @param string $preferred
+     */
+    public function __construct(Main $main, $preferred="EconomyAPI")
     {
         if(self::$instance === null) self::$instance = $this;
             else return;
 
-        $this->server = $server;
+        $this->server = $main->getServer();
+        $this->prices = $main->getConfig()->get('prices', []);
+        
         $economy = ["EconomyAPI", "PocketMoney", "MassiveEconomy", "GoldStd"];
         $ec = [];
         $e="none";
         foreach($economy as $ep){
-            $ins = $server->getPluginManager()->getPlugin($ep);
+            $ins = $this->server->getPluginManager()->getPlugin($ep);
             if($ins instanceof Plugin && $ins->isEnabled()){
                 $ec[$ins->getName()] = $ins;
             }
@@ -44,9 +56,11 @@ class Economy
             }
         }
         if($this->isLoaded()){
-            $server->getLogger()->info(Text::get('plugin.economy.set', $this->getName()));
+            $this->server->getLogger()->info(Text::get('plugin.economy.set', $this->getName()));
         } else {
-            $server->getLogger()->info(Text::get('plugin.economy.failed'));
+            $this->server->getLogger()->info(Text::get('plugin.economy.failed'));
+            $this->server->getLogger()->info(Text::get('plugin.economy.dummy'));
+            $this->economy = new DummyEconomy();
         }
     }
 
@@ -123,8 +137,23 @@ class Economy
         return false;
     }
 
-    public function getName() : string { return $this->economy->getDescription()->getName(); }
+    public function getName() : string {
+        if($this->economy instanceof DummyEconomy) return $this->economy->getName();
+        return $this->economy->getDescription()->getName();
+    }
     public function isLoaded() : bool { if($this->economy instanceof Plugin and $this->economy->isEnabled() ) return true; else return false; }
-    public function getAPI() : Plugin { return $this->economy; }
+    public function getAPI() { return $this->economy; }
+
+    public function getPrice($node) : int {
+        $dirs = explode(".", $node);
+        $i = 0;
+        $op = $this->prices;
+        while(isset($dirs[$i]) and isset($op[$dirs[$i]])){
+            if(!is_array($op[$dirs[$i]])) return (int) $op[$dirs[$i]];
+            $op = $op[$dirs[$i]];
+            $i++;
+        }
+        return 0;
+    }
 
 }
