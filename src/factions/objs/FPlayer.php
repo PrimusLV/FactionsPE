@@ -1,24 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: primus
- * Date: 5/18/16
- * Time: 10:52 PM
- */
-
 namespace factions\objs;
 
 
+use factions\faction\Faction;
 use factions\faction\Factions;
+use factions\utils\Text;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
-use pocketmine\Server;
 use pocketmine\utils\UUID;
 
 class FPlayer
 {
+    protected $invitation = [];
+
     /** @var bool */
     protected $isConsole = false;
     /**
@@ -43,8 +39,29 @@ class FPlayer
      */
     public static function get(Player $player) : FPlayer
     {
-        if( !isset(self::$fplayerMap[$player->getUniqueId()->toString()]) ) self::$fplayerMap[$player->getUniqueId()->toString()] = $player;
-        return self::$fplayerMap[$player->getUniqueId()->toString()] = new FPlayer($player);
+        if( !isset(self::$fplayerMap[$player->getUniqueId()->toString()]) ) self::$fplayerMap[$player->getUniqueId()->toString()] = new FPlayer($player);
+        return self::$fplayerMap[$player->getUniqueId()->toString()];
+    }
+
+    public static function updatePlayerTag($players=[]){
+        if($players instanceof FPlayer or $players instanceof Player)
+            $players = [$players];
+        elseif (empty($players))
+            $players = self::$fplayerMap;
+        
+        foreach($players as $player){
+            $tag = Text::getNameTagFormat();
+            if($player->hasFaction()) {
+                $tag = str_replace(["{RANK}", "{FACTION}", "{PLAYER}"], [
+                    Text::formatRank($player->getRank()),
+                    $player->getFaction()->getName(),
+                    $player->getPlayer()->getDisplayName()
+                ], $tag);
+                $player->getPlayer()->setNameTag($tag);
+            } else {
+                $player->getPlayer()->setNameTag($player->getPlayer()->getDisplayName());
+            }
+        }
     }
 
 
@@ -150,7 +167,7 @@ class FPlayer
     public function sendMessage($message)
     {
         if($this->player instanceof Player) $this->player->sendMessage($message);
-        (new ConsoleCommandSender())->sendMessage($message);
+        else (new ConsoleCommandSender())->sendMessage($message);
     }
 
     public function getRank() : int
@@ -159,6 +176,37 @@ class FPlayer
         if($this->isOfficer()) return Rel::OFFICER;
         return Rel::MEMBER;
     }
+
+    ////////////////////////////// INVITATION ///////////////////////////////////////
+    public function invite(Faction $faction, FPlayer $player, $rank = Rel::MEMBER) : bool {
+        $this->invitation = [
+            "to" => $faction,
+            "by" => $player,
+            "received" => time(),
+            "rank" => $rank
+        ];
+        var_dump($this->invitation);
+        var_dump($this->getInvitation());
+        return empty($this->invitation) === false; // For debug purposes
+    }
+    public function acceptInvitation() : bool {
+        echo "INVITATION ACCEPT";
+        if(empty($this->invitation)) return false;
+        $inv = $this->invitation;
+        if( !isset($inv["to"]) or !isset($inv["by"]) or !isset($inv["received"]) or !isset($inv["rank"])){
+            $this->invitation = [];
+            return false;
+        }
+        if( $inv["to"]->isFull() ) return false;
+        if( (time() - $inv["received"]) > 30 ) return false; # Timed out/Expired
+
+        $inv["to"]->addMember($this, $inv["rank"]);
+        $this->invitation = [];
+        return true;
+    }
+    public function getInvitation() : array { return $this->invitation; }
+    public function denyInvitation(){ $this->invitation=[]; return true; }
+
 
 
 }
