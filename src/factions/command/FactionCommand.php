@@ -15,11 +15,12 @@ use factions\integrations\Economy;
 use factions\Main;
 use factions\objs\FPlayer;
 use factions\objs\Permission;
-use factions\objs\Rel;
+use factions\objs\Plots;
 use factions\utils\Text;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
+use pocketmine\level\Position;
 use pocketmine\Player;
 
 class FactionCommand extends Command implements PluginIdentifiableCommand
@@ -43,19 +44,16 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
      */
     public function execute(CommandSender $sender, $commandLabel, array $args)
     {
+        /** @var Player $sender */
         if(!$this->testPermission($sender)) return true;
 
         if(empty($args)){
             $sender->sendMessage(Text::get('command.generic.usage'));
             return true;
         }
+        $isPlayer = $sender instanceof Player;
+        $fplayer = $isPlayer ? FPlayer::get($sender) : null;
 
-        if($sender instanceof Player){
-            $fp = FPlayer::get($sender);
-        } else {
-            $sender->sendMessage(Text::get('command.not.player'));
-            return true;
-        }
 
         switch(strtolower($args[0])){
 
@@ -65,12 +63,16 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
             case 'cre':
             case 'new':
 
+                if(!$isPlayer){
+                    $sender->sendMessage("Run this command in-game");
+                    return true;
+                }
                 if(!isset($args[1])) {
                     $sender->sendMessage("Usage: /f create <faction name>");
                     return true;
                 }
-                if(Economy::get()->getPrice('faction.create') > Economy::get()->getMoney($sender)){
-                    $sender->sendMessage("You don't have enough money.");
+                if(Economy::get()->getPrice('faction.create') > Economy::get()->getMoney($fplayer->getPlayer())){
+                    $sender->sendMessage(Text::get('economy.not.enough'));
                     return true;
                 }
                 if(FPlayer::get($sender)->hasFaction()) {
@@ -95,7 +97,7 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
                 }
                     $name = $args[1];
 
-                    Factions::_create($name, FPlayer::get($sender));
+                    Factions::_create($name, $fplayer);
                     FPlayer::updatePlayerTag($sender);
 
                     $sender->sendMessage("Faction successfully created!");
@@ -106,16 +108,16 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
             
             case 'delete':
             case 'del':
-                if(!$fp->hasFaction()){
+                if(!$fplayer->hasFaction()){
                     $sender->sendMessage(Text::get('command.not.member'));
                     return true;
                 }
-                if(!$fp->isLeader()){
+                if(!$fplayer->isLeader()){
                     $sender->sendMessage(Text::get('command.permission.not.leader'));
                     return true;
                 }
-                $name = $fp->getFaction()->getName();
-                if(Factions::_delete($fp->getFaction())){
+                $name = $fplayer->getFaction()->getName();
+                if(Factions::_delete($fplayer->getFaction())){
                     $sender->sendMessage(Text::get('command.delete.success', $name));
                 } else {
                     $sender->sendMessage(Text::get('command.delete.fail'));
@@ -161,7 +163,6 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
 
                     $sender->sendMessage($invited->getDisplayName() . " has been invited!");
                     $invited->sendMessage("You have been invited to {$fplayer->getFaction()->getName()} faction by {$fplayer->getPlayer()->getDisplayName()}. Type '/f accept' or '/f deny' into chat to accept or deny!");
-                    var_dump(FPlayer::get($invited));
                     $this->test = FPlayer::get($invited);
                     return true;
                 } else {
@@ -175,8 +176,6 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
 
                 $fplayer = FPlayer::get($sender);
                 $inv = $fplayer->getInvitation();
-                var_dump($fplayer);
-                var_dump($this->test === $fplayer);
 
                 if( empty($inv)) {
                     $sender->sendMessage("You have not been invited to any factions!");
@@ -202,7 +201,7 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
                 }
                 break;
 
-            /////////////////////////////// DENY ///////////////////////////////
+            ///////////////////////////// DENY /////////////////////////////////
 
 
             case 'deny':
@@ -259,6 +258,79 @@ class FactionCommand extends Command implements PluginIdentifiableCommand
                     $sender->sendMessage("You are no longer leader!");
                     $this->plugin->getServer()->getPlayer($args[1])->sendMessage("You are now leader of {$ftarget->getFaction()->getName()}!");
                     return true;
+                break;
+
+            ///////////////////////////// HOME /////////////////////////////////
+
+            case 'home':
+
+                $fplayer = FPlayer::get($sender);
+                if($fplayer->hasFaction() === false){
+                    $sender->sendMessage("You must be in a faction to use this");
+                    return true;
+                }
+                if(Permission::hasPermission($fplayer, 'home') === false){
+                    $sender->sendMessage("You don't have permission to use this.");
+                    return true;
+                }
+                if( ($home = $fplayer->getFaction()->getHome()) === null ){
+                    $sender->sendMessage("Faction doesn't have any valid home set.");
+                    return true;
+                }
+                $sender->teleport($home->getLevel()->getSafeSpawn());
+                $sender->teleport($home);
+                $sender->sendMessage("Teleported to faction's home.");
+                return true;
+            break;
+
+            ///////////////////////////// SETHOME /////////////////////////////////
+
+            case 'sethome':
+                if(!$isPlayer){
+                    $sender->sendMessage("Please run this in-game");
+                    return true;
+                }
+                if($fplayer->hasFaction() === false){
+                    $sender->sendMessage("You must be in faction to use this");
+                    return true;
+                }
+                if(Permission::hasPermission($fplayer, 'sethome') === false){
+                    $sender->sendMessage("You don't have permission to use this");
+                    return true;
+                }
+                if(Plots::getOwnerFaction($sender) instanceof Faction){
+                    $sender->sendMessage("You can't set home here");
+                    return true;
+                }
+                $fplayer->getFaction()->setHome($sender->getPosition());
+                if($fplayer->getFaction()->getHome() === $sender->getPosition()){
+                    $sender->sendMessage("Home set successfully");
+                    return true;
+                }
+            break;
+
+            ///////////////////////////// chat /////////////////////////////////
+
+            case 'chat':
+
+                if(!$isPlayer){
+                    $sender->sendMessage("Please run this in-game");
+                    return true;
+                }
+                if($fplayer->hasFaction() === false){
+                    $sender->sendMessage("You must be in faction to use this");
+                    return true;
+                }
+                if($fplayer->getChatChannel() !== FPlayer::CHAT_FACTION){
+                    $fplayer->setChatChannel(FPlayer::CHAT_FACTION);
+                    $sender->sendMessage("Faction chat activated");
+                    return true;
+                } else {
+                    $fplayer->setChatChannel(FPlayer::CHAT_NORMAL);
+                    $sender->sendMessage("Faction chat deactivated");
+                    return true;
+                }
+            break;
         }
         return false;
     }
