@@ -86,7 +86,6 @@ class NBTDataProvider
                 if($nbt){
                     Factions::_add(new Faction($nbt, $this->plugin->getServer()));
                     if(Factions::_getFactionById($nbt->ID->getValue()) instanceof Faction){
-                        var_dump(Factions::_getFactionByName($nbt->Name->getValue()));
                         $this->plugin->getLogger()->debug(Text::get('plugin.data.faction.loaded', $nbt->Name->getValue()));
                     } else {
                         $this->plugin->getLogger()->debug(Text::get('plugin.data.faction.notLoaded', $nbt->Name->getValue()));
