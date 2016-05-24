@@ -1,4 +1,19 @@
 <?php
+/*
+ *   88""Yb     88""Yb     88     8b    d8     88   88     .dP"Y8
+ *   88__dP     88__dP     88     88b  d88     88   88     `Ybo."
+ *   88"""      88"Yb      88     88YbdP88     Y8   8P     o.`Y8b
+ *   88         88  Yb     88     88 YY 88     `YbodP'     8bodP'
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * @author Latvian PHP programmer Kristaps Drivnieks (Primus)
+ * @link https://Github.com/PrimusLV/FactionsPE
+ */
+
 namespace factions\objs;
 
 
@@ -19,15 +34,14 @@ class FPlayer
     const CHAT_FACTION = 3;
     const CHAT_NOT_FACTION = 4;
     const CHAT_NORMAL = 5;
-
-    protected $invitation = [];
-    /** @var bool */
-    protected $isConsole = false;
     /**
      * Holds all FPlayer objects
      * @var array
      */
     private static $fplayerMap = null;
+    protected $invitation = [];
+    /** @var bool */
+    protected $isConsole = false;
     protected $chatChannel = self::CHAT_GLOBAL;
 
     public function __construct(Player $player, $isConsole = false){
@@ -38,17 +52,6 @@ class FPlayer
         }
     }
 
-
-    /**
-     * Get FPlayer from Player
-     * @param Player $player
-     * @return FPlayer
-     */
-    public static function get(Player $player) : FPlayer
-    {
-        if( !isset(self::$fplayerMap[$player->getUniqueId()->toString()]) ) self::$fplayerMap[$player->getUniqueId()->toString()] = new FPlayer($player);
-        return self::$fplayerMap[$player->getUniqueId()->toString()];
-    }
     public static function getAll() : array { return self::$fplayerMap; }
 
     public static function updatePlayerTag($players=[]){
@@ -73,13 +76,27 @@ class FPlayer
         }
     }
 
+    /**
+     * Get FPlayer from Player
+     * @param Player $player
+     * @return FPlayer
+     */
+    public static function get(Player $player) : FPlayer
+    {
+        if (!isset(self::$fplayerMap[$player->getUniqueId()->toString()])) self::$fplayerMap[$player->getUniqueId()->toString()] = new FPlayer($player);
+        return self::$fplayerMap[$player->getUniqueId()->toString()];
+    }
 
     /**
-     * Returns player owner of this class, or null if it's Console
-     * @return Player|null
+     * Check if owner is class is in faction or not
+     * @return bool
      */
-    public function getPlayer(){
-        return $this->player;
+    public function hasFaction() : bool
+    {
+        if ($this->getFaction() == null) return false;
+        if ($this->getFaction()->getId() == "none") return false;
+        if ($this->getFaction()->isWilderness()) return false;
+        return true;
     }
 
     /**
@@ -91,15 +108,11 @@ class FPlayer
         return Factions::_getFactionFor($this->player);
     }
 
-    /**
-     * Check if owner is class is in faction or not
-     * @return bool
-     */
-    public function hasFaction() : bool {
-        if($this->getFaction() == null) return false;
-        if($this->getFaction()->getId() == "none") return false;
-        if($this->getFaction()->isWilderness()) return false;
-        return true;
+    public function getRank() : int
+    {
+        if ($this->isLeader()) return Rel::LEADER;
+        if ($this->isOfficer()) return Rel::OFFICER;
+        return Rel::MEMBER;
     }
 
     /**
@@ -111,6 +124,12 @@ class FPlayer
         return false;
     }
 
+    public function getName() : string
+    {
+        if ($this->isConsole) return "@console";
+        return $this->player->getName();
+    }
+
     /**
      * Get whether this class owner is ranked as officer
      * @return bool
@@ -120,14 +139,18 @@ class FPlayer
         return false;
     }
 
+    /**
+     * Returns player owner of this class, or null if it's Console
+     * @return Player|null
+     */
+    public function getPlayer()
+    {
+        return $this->player;
+    }
+
     public function isMember() : bool {
         if($this->getRank() === Rel::MEMBER) return true;
         return false;
-    }
-
-    public function getName() : string {
-        if ($this->isConsole) return "@console";
-        return $this->player->getName();
     }
 
     public function getUUID() : UUID {
@@ -140,6 +163,11 @@ class FPlayer
         return $this->player->getLevel();
     }
 
+
+    // Tasks
+    # TODO
+    // Tasks
+
     /**
      * Get Faction ID
      * @return string
@@ -148,11 +176,6 @@ class FPlayer
         if( $this->hasFaction() ) return $this->getFaction()->getId();
         return "";
     }
-
-
-    // Tasks
-        # TODO
-    // Tasks
 
     /**
      * Get Player position
@@ -184,14 +207,8 @@ class FPlayer
         else (new ConsoleCommandSender())->sendMessage($message);
     }
 
-    public function getRank() : int
-    {
-        if($this->isLeader()) return Rel::LEADER;
-        if($this->isOfficer()) return Rel::OFFICER;
-        return Rel::MEMBER;
-    }
-
     ////////////////////////////// INVITATION ///////////////////////////////////////
+
     public function invite(Faction $faction, FPlayer $player, $rank = Rel::MEMBER) : bool {
         $this->invitation = [
             "to" => $faction,
@@ -203,6 +220,12 @@ class FPlayer
         var_dump($this->getInvitation());
         return empty($this->invitation) === false; // For debug purposes
     }
+
+    public function getInvitation() : array
+    {
+        return $this->invitation;
+    }
+
     public function acceptInvitation() : bool {
         echo "INVITATION ACCEPT";
         if(empty($this->invitation)) return false;
@@ -218,18 +241,27 @@ class FPlayer
         $this->invitation = [];
         return true;
     }
-    public function getInvitation() : array { return $this->invitation; }
+
     public function denyInvitation(){ $this->invitation=[]; return true; }
 
     ////////////////////////////// CHAT CHANNELS ///////////////////////////////////////
-    public function getChatChannel() : int { return $this->chatChannel; }
-    public function setChatChannel($channel){ $this->chatChannel = $channel; }
+
     public function sendMessageToChannel($message){
         foreach(self::$fplayerMap as $player){
             if($player->getChatChannel() === $this->getChatChannel()){
                 $player->sendMessage($message);
             }
         }
+    }
+
+    public function getChatChannel() : int
+    {
+        return $this->chatChannel;
+    }
+
+    public function setChatChannel($channel)
+    {
+        $this->chatChannel = $channel;
     }
 
 

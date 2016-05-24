@@ -1,9 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: primus
- * Date: 5/20/16
- * Time: 2:43 PM
+/*
+ *   88""Yb     88""Yb     88     8b    d8     88   88     .dP"Y8
+ *   88__dP     88__dP     88     88b  d88     88   88     `Ybo."
+ *   88"""      88"Yb      88     88YbdP88     Y8   8P     o.`Y8b
+ *   88         88  Yb     88     88 YY 88     `YbodP'     8bodP'
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * @author Latvian PHP programmer Kristaps Drivnieks (Primus)
+ * @link https://Github.com/PrimusLV/FactionsPE
  */
 
 namespace factions\event\listener;
@@ -11,6 +19,7 @@ namespace factions\event\listener;
 use factions\base\ListenerBase;
 use factions\integrations\Economy;
 use factions\objs\FPlayer;
+use factions\objs\Plots;
 use factions\objs\Rel;
 use factions\utils\Text;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
@@ -44,6 +53,11 @@ class PlayerEventListener extends ListenerBase
             $logger->debug("Rank: ".Text::rankToString($player->getRank()));
             $logger->debug("Money: ".Economy::get()->getMoney($player->getPlayer()));
         }
+
+        // Test
+        $logger->debug($player->getFaction()->getName() . " has " . count(Plots::_getFactionPlots($player->getFaction())) . " plots");
+        Plots::_claim($player->getFaction(), $player, $player->getPlayer());
+        $logger->debug($player->getFaction()->getName() . " has " . count(Plots::_getFactionPlots($player->getFaction())) . " plots");
     }
 
     public function onPlayerRespawn(PlayerRespawnEvent $e){

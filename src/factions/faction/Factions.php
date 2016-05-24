@@ -1,8 +1,25 @@
 <?php
+/*
+ *   88""Yb     88""Yb     88     8b    d8     88   88     .dP"Y8
+ *   88__dP     88__dP     88     88b  d88     88   88     `Ybo."
+ *   88"""      88"Yb      88     88YbdP88     Y8   8P     o.`Y8b
+ *   88         88  Yb     88     88 YY 88     `YbodP'     8bodP'
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * @author Latvian PHP programmer Kristaps Drivnieks (Primus)
+ * @link https://Github.com/PrimusLV/FactionsPE
+ */
+
 namespace factions\faction;
+
 use factions\data\DataProvider;
 use factions\event\FactionCreateEvent;
 use factions\objs\FPlayer;
+use factions\objs\Plots;
 use factions\objs\Rel;
 use pocketmine\command\CommandSender;
 use pocketmine\level\Level;
@@ -15,12 +32,6 @@ use pocketmine\nbt\tag\StringTag;
 use pocketmine\Player;
 use pocketmine\Server;
 
-/**
- * Created by PhpStorm.
- * User: primus
- * Date: 5/18/16
- * Time: 9:30 PM
- */
 class Factions
 {
     /** @var Factions $instance */
@@ -32,54 +43,18 @@ class Factions
      */
     protected $storage;
 
-    public static function get(){ return self::$instance; }
-
     public function __construct(){
         self::$instance = $this;
         $this->storage = new \SplObjectStorage;
     }
 
-    //////////////////////
-    //  Static methods  //
-    //////////////////////
-
     public static function _getFactionById($id) {
         return self::get()->getFactionById($id);
     }
 
-    public static function _getFactionByName($name){
-        return self::get()->getFactionByName($name);
-    }
-
-    public static function _getFactionAt(Position $pos) {
-        return self::get()->getFactionAt($pos);
-    }
-
-	public static function _getFactionFor(Player $player) {
-        return self::get()->getFactionFor($player);
-    }
-
-	public static function _getFactionForMember(FPlayer $player) {
-        return self::get()->getFactionFor($player->getPlayer());
-    }
-
-    public static function _add(Faction $faction) : bool {
-        return self::get()->add($faction);
-    }
-
-    public static function _delete(Faction $faction) : bool {
-        return self::get()->delete($faction);
-    }
-
-    public static function _create($name, FPlayer $creator, $members = [], $power=0, $description="", $home=null){
-        return self::get()->create($name, $creator, $members, $power, $description, $home);
-    }
-
-    public static function generateId(){
-        return substr(md5(base64_encode(mt_rand(PHP_INT_MIN, PHP_INT_MAX))), 0, 24);
-    }
-
-
+    //////////////////////
+    //  Static methods  //
+    //////////////////////
 
 	/**
      * Get Faction by their ID
@@ -94,16 +69,14 @@ class Factions
         return null;
     }
 
-    /**
-     * Get faction by their name
-     * @param $name
-     * @return Faction|null
-     */
-    public function getFactionByName($name){
-        foreach($this->storage as $faction){
-            if(strtolower($faction->getName()) === strtolower($name)) return $faction;
-        }
-        return null;
+    public static function get()
+    {
+        return self::$instance;
+    }
+
+    public static function _getFactionAt(Position $pos)
+    {
+        return self::get()->getFactionAt($pos);
     }
 
 	/**
@@ -113,6 +86,11 @@ class Factions
      */
 	public function getFactionAt(Position $pos){
         # TODO
+    }
+
+    public static function _getFactionFor(Player $player)
+    {
+        return self::get()->getFactionFor($player);
     }
 
 	/**
@@ -127,34 +105,23 @@ class Factions
         return null;
     }
 
-	/**
-     * Get Faction for a sender
-     * @param CommandSender $sender
-     * @return Faction|null
-     */
-	public function getFactionForSender(CommandSender $sender) {
-    if ($sender instanceof Player) return $this->getFactionFor($sender);
-
-		return null;
-	}
-
-    // Check if factions is enabled
-    public function isFactionsEnabled(Level $level) : bool {
-        # TODO
+    public static function _delete(Faction $faction) : bool
+    {
+        return self::get()->delete($faction);
     }
 
-    public function add(Faction $faction) : bool {
-        if($this->storage->contains($faction)) return false;
-        $this->storage->attach($faction);
-        return $this->storage->contains($faction);
-    }
-    
     public function delete(Faction $faction) : bool {
         if(DataProvider::get()->deleteFactionData($faction)){
             $this->storage->detach($faction);
+            Plots::_unregisterFaction($faction);
             return $this->storage->contains($faction) === false;
         }
         return false;
+    }
+
+    public static function _create($name, FPlayer $creator, $members = [], $power = 0, $description = "", $home = null)
+    {
+        return self::get()->create($name, $creator, $members, $power, $description, $home);
     }
 
     public function create($name, FPlayer $creator, $members=[], $power = 0, $description = "", $home = null){
@@ -196,6 +163,65 @@ class Factions
         $faction = new Faction($nbt, Server::getInstance());
 
         return Factions::_add($faction);
+    }
+
+    public static function _getFactionByName($name)
+    {
+        return self::get()->getFactionByName($name);
+    }
+
+    /**
+     * Get faction by their name
+     * @param $name
+     * @return Faction|null
+     */
+    public function getFactionByName($name)
+    {
+        foreach ($this->storage as $faction) {
+            if (strtolower($faction->getName()) === strtolower($name)) return $faction;
+        }
+        return null;
+    }
+
+    public static function _getFactionForMember(FPlayer $player)
+    {
+        return self::get()->getFactionFor($player->getPlayer());
+    }
+
+    public static function generateId()
+    {
+        return substr(md5(base64_encode(mt_rand(PHP_INT_MIN, PHP_INT_MAX))), 0, 24);
+    }
+
+    // Check if factions is enabled
+
+    public static function _add(Faction $faction) : bool
+    {
+        return self::get()->add($faction);
+    }
+
+    public function add(Faction $faction) : bool
+    {
+        if ($this->storage->contains($faction)) return false;
+        $this->storage->attach($faction);
+        return $this->storage->contains($faction);
+    }
+
+    /**
+     * Get Faction for a sender
+     * @param CommandSender $sender
+     * @return Faction|null
+     */
+    public function getFactionForSender(CommandSender $sender)
+    {
+        if ($sender instanceof Player) return $this->getFactionFor($sender);
+
+        return null;
+    }
+
+    public function isFactionsEnabled(Level $level) : bool
+    {
+        # TODO
     }
 
     public function getAll() : array {

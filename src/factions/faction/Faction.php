@@ -1,9 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: primus
- * Date: 5/18/16
- * Time: 10:22 PM
+/*
+ *   88""Yb     88""Yb     88     8b    d8     88   88     .dP"Y8
+ *   88__dP     88__dP     88     88b  d88     88   88     `Ybo."
+ *   88"""      88"Yb      88     88YbdP88     Y8   8P     o.`Y8b
+ *   88         88  Yb     88     88 YY 88     `YbodP'     8bodP'
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * @author Latvian PHP programmer Kristaps Drivnieks (Primus)
+ * @link https://Github.com/PrimusLV/FactionsPE
  */
 
 namespace factions\faction;
@@ -12,6 +20,7 @@ namespace factions\faction;
 use factions\event\FactionJoinEvent;
 use factions\event\FactionLeaveEvent;
 use factions\objs\FPlayer;
+use factions\objs\Plots;
 use factions\objs\Rel;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
@@ -26,22 +35,18 @@ use pocketmine\Server;
 class Faction
 {
     const MAX_PLAYERS = 10; # TODO: Configurable
+    /** @var Position $home */
+    protected $home;
+    protected $power;
 
+    // TODO: $leader
+    protected $description;
     /** @var  string $id */
     private $id;
     /** @var array $members */
     private $members = [];
-
-    // TODO: $leader
-
     /** @var string $name */
     private $name;
-
-    /** @var Position $home */
-    protected $home;
-    protected $power;
-    protected $description;
-
     /** @var Server $server */
     private $server;
 
@@ -67,7 +72,7 @@ class Faction
             $this->members[$member->Name->getValue()] = $member->Rank->getValue();
         }
 
-
+        Plots::_registerFaction($this);
     }
 
     /**
@@ -92,18 +97,6 @@ class Faction
 	}
 
     /**
-     * Returns a list of online players in the faction
-     * @return Player[]
-     */
-    public function getOnlineMembers() : array {
-        $o = [];
-        foreach($this->members as $member => $rank){
-            if($p = $this->server->getPlayer($member)) $o[] = $p;
-        }
-        return $o;
-    }
-
-    /**
      * Add member to this faction
      * @param FPlayer $player
      * @param $rank
@@ -123,18 +116,13 @@ class Faction
         $this->members[strtolower($player->getName())] = $rank;
     }
 
-    /**
-     * Remove member from this faction
-     * @param FPlayer $player
-     * @throws \InvalidStateException
-     */
-    public function removeMember(FPlayer $player){
-        if($player->getFaction() !== $this){
-            throw new \InvalidStateException("Player isn't member of this faction");
+    public function newLeader(FPlayer $member)
+    {
+        if ($member->getFaction() !== $this) {
+            throw new \InvalidStateException("Player is not in this faction");
         }
-        $this->server->getPluginManager()->callEvent($e = new FactionLeaveEvent($player, $this));
-        if($e->isCancelled()) return;
-        unset($this->members[strtolower($player)]);
+        $this->members[$this->getLeader()] = Rel::OFFICER;
+        $this->members[strtolower($member->getName())] = Rel::LEADER;
     }
 
     /**
@@ -148,12 +136,19 @@ class Faction
         return "";
     }
 
-    public function newLeader(FPlayer $member) {
-        if($member->getFaction() !== $this){
-            throw new \InvalidStateException("Player is not in this faction");
+    /**
+     * Remove member from this faction
+     * @param FPlayer $player
+     * @throws \InvalidStateException
+     */
+    public function removeMember(FPlayer $player)
+    {
+        if ($player->getFaction() !== $this) {
+            throw new \InvalidStateException("Player isn't member of this faction");
         }
-        $this->members[$this->getLeader()] = Rel::OFFICER;
-        $this->members[strtolower($member->getName())] = Rel::LEADER;
+        $this->server->getPluginManager()->callEvent($e = new FactionLeaveEvent($player, $this));
+        if ($e->isCancelled()) return;
+        unset($this->members[strtolower($player)]);
     }
 
     /**
@@ -239,7 +234,6 @@ class Faction
         # TODO
     }
 
-
     /**
      * Get relation status with other faction
      * @param Faction $faction
@@ -249,8 +243,6 @@ class Faction
         return Rel::getRelationship($this, $faction);
     }
 
-	//public abstract boolean isWilderness();
-
     /**
      * @return float
      */
@@ -258,6 +250,8 @@ class Faction
     {
         return (float) $this->power;
     }
+
+    //public abstract boolean isWilderness();
 
     /**
      * @param string $message
@@ -267,6 +261,19 @@ class Faction
             $member->sendMessage($message);
 		}
 	}
+
+    /**
+     * Returns a list of online players in the faction
+     * @return Player[]
+     */
+    public function getOnlineMembers() : array
+    {
+        $o = [];
+        foreach ($this->members as $member => $rank) {
+            if ($p = $this->server->getPlayer($member)) $o[] = $p;
+        }
+        return $o;
+    }
 
     public function isWilderness() : bool {
         #TODO
