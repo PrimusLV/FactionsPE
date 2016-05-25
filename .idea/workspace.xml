@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e6e121d-d6c1-41c8-8f53-f5da539930b7" name="Default" comment="Added Credit block">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/primus.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/primus.xml" />
+    <list default="true" id="8e6e121d-d6c1-41c8-8f53-f5da539930b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.yml" afterPath="$PROJECT_DIR$/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/Main.php" afterPath="$PROJECT_DIR$/src/factions/Main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/base/ListenerBase.php" afterPath="$PROJECT_DIR$/src/factions/base/ListenerBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/command/FactionCommand.php" afterPath="$PROJECT_DIR$/src/factions/command/FactionCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/data/DataProvider.php" afterPath="$PROJECT_DIR$/src/factions/data/DataProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/data/NBTDataProvider.php" afterPath="$PROJECT_DIR$/src/factions/data/NBTDataProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/FactionCreateEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/FactionCreateEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/FactionDisbandEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/FactionDisbandEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/FactionJoinEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/FactionJoinEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/FactionLeaveEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/FactionLeaveEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/FactionRenameEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/FactionRenameEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/LandChangeEvent.php" afterPath="$PROJECT_DIR$/src/factions/event/LandChangeEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/listener/FactionEventListener.php" afterPath="$PROJECT_DIR$/src/factions/event/listener/FactionEventListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php" afterPath="$PROJECT_DIR$/src/factions/event/listener/PlayerEventListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/faction/Faction.php" afterPath="$PROJECT_DIR$/src/factions/faction/Faction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/faction/Factions.php" afterPath="$PROJECT_DIR$/src/factions/faction/Factions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/integrations/DummyEconomy.php" afterPath="$PROJECT_DIR$/src/factions/integrations/DummyEconomy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/integrations/Economy.php" afterPath="$PROJECT_DIR$/src/factions/integrations/Economy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/objs/FPlayer.php" afterPath="$PROJECT_DIR$/src/factions/objs/FPlayer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/objs/Permission.php" afterPath="$PROJECT_DIR$/src/factions/objs/Permission.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/objs/Plots.php" afterPath="$PROJECT_DIR$/src/factions/objs/Plots.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/objs/Rel.php" afterPath="$PROJECT_DIR$/src/factions/objs/Rel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factions/utils/Text.php" afterPath="$PROJECT_DIR$/src/factions/utils/Text.php" />
     </list>
     <ignored path="Factions.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -703,7 +679,7 @@
       <workItem from="1090184983042" duration="1935000" />
       <workItem from="1090184773234" duration="10799000" />
       <workItem from="1464118012503" duration="2136000" />
-      <workItem from="1464188486640" duration="180000" />
+      <workItem from="1464188486640" duration="436000" />
     </task>
     <task id="LOCAL-00001" summary="'/f create' works.">
       <created>1090185791057</created>
@@ -803,11 +779,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464120015488</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added copyright comment block">
+      <created>1464188742776</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1464188742776</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130310000" />
+    <option name="totallyTimeSpent" value="130566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-4" width="1225" height="1029" extended-state="6" />
@@ -817,9 +800,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33443707" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33443707" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -867,7 +850,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="'/f create' works." />
     <MESSAGE value="Fixed FPlayer::get(). Implemented invitations." />
     <MESSAGE value="Added readFile() and writeFile() function." />
@@ -881,10 +865,8 @@
     <MESSAGE value="Implemented chat channels" />
     <MESSAGE value="v0.0.1 - Basic factions" />
     <MESSAGE value="Added Credit block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Credit block" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added copyright comment block" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added copyright comment block" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
