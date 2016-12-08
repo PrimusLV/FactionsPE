@@ -1,0 +1,10 @@
+# Resource files
+gameplay.json
+plots.json
+config.json
+
+# folders
+factions
+players
+# IDE res files
+.idea
